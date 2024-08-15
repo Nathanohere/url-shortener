@@ -3,6 +3,10 @@ import Url from '../model/model.js';
 
 const router = express.Router();
 
+router.get('/', (req, res) => {
+  res.render('index');
+});
+
 router.get('/:urlId', async (req, res) => {
   try {
     const url = await Url.findOneAndUpdate(

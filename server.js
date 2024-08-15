@@ -12,15 +12,9 @@ const DB = process.env.DATABASE.replace(
   process.env.DATABASE_PASSWORD
 );
 
-mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then((con) => {
-    console.log(con.connections);
-    console.log('DB is running successfully');
-  });
+mongoose.connect(DB).then(() => {
+  console.log('DB is running successfully');
+});
 
 // app.use('/api/v1/user', router);
 

@@ -22,7 +22,7 @@ app.use('/', redirectRouter);
 //   res.status(201).redirect('/');
 // });
 
-// app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 // app.get('/', (req, res) => {
 //   res.render('index');
